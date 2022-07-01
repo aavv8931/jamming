@@ -23,12 +23,13 @@ class App extends React.Component{
   }
 
   addTrack(track){
-    let prevPlayListTracks = this.state.playlistTracks
+    let tracks = this.state.playlistTracks
     if(this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)){
       return;
-    }else{
-      this.setState(prevPlayListTracks.push(track))
     }
+
+    tracks.push(track)
+    this.setState = ({playlistName: track})
   }
 
   render(){
